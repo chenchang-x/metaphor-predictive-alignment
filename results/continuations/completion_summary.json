@@ -1,0 +1,218 @@
+{
+  "checkpoint": {
+    "durable_groups": 7920,
+    "file": "generation_checkpoint.sqlite3",
+    "schema": "munch-qwen3.5-9b-generation-checkpoint/v1",
+    "sqlite_integrity": "ok",
+    "unique_constraint": true
+  },
+  "identity": {
+    "config_id": "munch-qwen3.5-9b-q3-h5-k32-seeds11-23-37-v1",
+    "dataset": {
+      "dataset_id": "munch-5b78a540-q3-qwen3p5-9b-project-copy-v1",
+      "input_file": "data/processed/analysis_items.csv",
+      "input_sha256": "e9282952a95f6a0b33a229c7bb4f9ab71496a2c7fafbf60af502917ef3a72f93",
+      "sentence_ids": 595,
+      "source_sids": 553,
+      "triple_rows": 880
+    },
+    "expected": {
+      "continuations": 253440,
+      "groups": 7920,
+      "groups_per_condition": 2640,
+      "groups_per_seed": 2640
+    },
+    "model": {
+      "identifier": "Qwen/Qwen3.5-9B",
+      "instruction_tuned": true,
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "project_namespace": "qwen3.5-9b",
+    "runtime": {
+      "determinism": {
+        "algorithms": "torch deterministic algorithms",
+        "cublas_workspace_config": ":4096:8",
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_allow_tf32": false,
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "deterministic_algorithms_enabled": true,
+        "reproducibility_scope": "exact resume within the recorded model, artifacts, GPU, driver, CUDA, PyTorch, and Transformers runtime",
+        "seed_policy": "seed Python, NumPy, CPU PyTorch, and all visible CUDA generators once per seed; stable item then M/A/I group order"
+      },
+      "gpu": {
+        "compute_capability": [
+          12,
+          0
+        ],
+        "cuda_visible_devices": "0",
+        "driver": "570.211.01",
+        "name": "NVIDIA GeForce RTX 5090",
+        "selected_device": "cuda:0",
+        "total_memory_bytes": 33679736832,
+        "uuid": "GPU-b53b308e-5d38-42af-01ca-5e21fb39b700"
+      },
+      "load": {
+        "attention_implementation": "eager",
+        "device_map": {
+          "": "cuda:0"
+        },
+        "dtype": "bfloat16",
+        "local_files_only": true,
+        "low_cpu_mem_usage": true,
+        "quantization": null,
+        "single_gpu": true,
+        "trust_remote_code": false
+      },
+      "model": {
+        "architecture": "Qwen3_5ForCausalLM",
+        "artifact_files": {
+          "chat_template.jinja": {
+            "bytes": 7756
+          },
+          "config.json": {
+            "bytes": 3126
+          },
+          "merges.txt": {
+            "bytes": 3353259
+          },
+          "model.safetensors-00001-of-00004.safetensors": {
+            "bytes": 5276436216
+          },
+          "model.safetensors-00002-of-00004.safetensors": {
+            "bytes": 5335161512
+          },
+          "model.safetensors-00003-of-00004.safetensors": {
+            "bytes": 5368717440
+          },
+          "model.safetensors-00004-of-00004.safetensors": {
+            "bytes": 3325995712
+          },
+          "model.safetensors.index.json": {
+            "bytes": 79657
+          },
+          "tokenizer.json": {
+            "bytes": 12807982
+          },
+          "tokenizer_config.json": {
+            "bytes": 16710
+          },
+          "vocab.json": {
+            "bytes": 6722759
+          }
+        },
+        "attention_implementation": "eager",
+        "hidden_size": 4096,
+        "identifier": "Qwen/Qwen3.5-9B",
+        "max_position_embeddings": 262144,
+        "model_type": "qwen3_5_text",
+        "num_attention_heads": 16,
+        "num_hidden_layers": 32,
+        "num_key_value_heads": 4,
+        "parameter_count": 8953803264,
+        "parameter_devices": [
+          "cuda:0"
+        ],
+        "parameter_dtypes": [
+          "bfloat16"
+        ],
+        "quantized": false,
+        "requested_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+        "resolved_commit": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+        "vocab_size": 248320
+      },
+      "software": {
+        "cuda_runtime": "12.8",
+        "cudnn": "91002",
+        "huggingface_hub": "1.30.0",
+        "numpy": "1.26.4",
+        "python": "3.12.3",
+        "torch": "2.8.0+cu128",
+        "transformers": "5.16.1"
+      },
+      "tokenizer": {
+        "chat_template_available": true,
+        "chat_template_preserved": true,
+        "class": "Qwen2Tokenizer",
+        "rq1_interface": {
+          "add_special_tokens": false,
+          "chat_template_used": false,
+          "raw_text_prefixes": true
+        }
+      }
+    },
+    "sampling": {
+      "chat_template_used_for_rq1": false,
+      "conditions": [
+        "M",
+        "A",
+        "I"
+      ],
+      "do_sample": true,
+      "eos_stopping": false,
+      "h_qwen_tokens": 5,
+      "q_orthographic_words": 3,
+      "samples_per_condition_per_seed": 32,
+      "seed_scope": "set once per seed; stable item then M/A/I iteration",
+      "seeds": [
+        11,
+        23,
+        37
+      ],
+      "temperature": 1.0,
+      "tokenizer_add_special_tokens": false,
+      "top_k": 0,
+      "top_p": 1.0
+    }
+  },
+  "invocation": {
+    "complete": true,
+    "generated_this_invocation": 7920,
+    "observed_groups": 7920,
+    "skipped_completed": 0
+  },
+  "output": {
+    "file": "continuations.jsonl",
+    "format": "UTF-8 JSON Lines; stable seed/item/condition order",
+    "sha256": "a619bcd1f200e72ff90929f16ab5068a2ac33066109aad703c15695b9fc83839"
+  },
+  "run_id": "munch-qwen3p5-9b-20260908T224851Z-9fd86dafddf5",
+  "schema": "munch-qwen3.5-9b-production-summary/v1",
+  "status": "complete",
+  "validation": {
+    "duplicate_groups": 0,
+    "expected_continuations": 253440,
+    "expected_groups": 7920,
+    "expected_groups_per_condition": 2640,
+    "expected_groups_per_seed": 2640,
+    "expected_groups_per_seed_condition": 880,
+    "expected_items": 880,
+    "missing_groups": 0,
+    "observed_continuations": 253440,
+    "observed_groups": 7920,
+    "observed_groups_by_condition": {
+      "A": 2640,
+      "I": 2640,
+      "M": 2640
+    },
+    "observed_groups_by_seed": {
+      "11": 2640,
+      "23": 2640,
+      "37": 2640
+    },
+    "observed_groups_by_seed_condition": {
+      "11:A": 880,
+      "11:I": 880,
+      "11:M": 880,
+      "23:A": 880,
+      "23:I": 880,
+      "23:M": 880,
+      "37:A": 880,
+      "37:I": 880,
+      "37:M": 880
+    },
+    "observed_items": 880,
+    "status": "pass",
+    "unexpected_groups": 0
+  }
+}
