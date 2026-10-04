@@ -1,0 +1,40 @@
+.cache/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+.venv/
+.testdeps/
+.tmp/
+tmp*/
+
+# Every model-derived artifact starts empty and is generated inside this project.
+data/processed/*
+!data/processed/.gitkeep
+data/reference/*
+!data/reference/.gitkeep
+data/smoke/*
+!data/smoke/.gitkeep
+results/*
+!results/.gitkeep
+environment/*.json
+environment/*.txt
+
+# Nested upstream repository internals are provenance inputs, not project history.
+vendor/**/.git/
+
+# RunPod transfer bundles and downloaded outputs.
+transfer/*.zip
+transfer/*.tar.gz
+transfer/downloaded/
+
+# Retain the selected inputs, environment records, and completed formal run.
+!data/processed/analysis_items.csv
+!data/reference/ias_naturalstories_qwen3_5_9b_h5_final_manifest.json
+!data/reference/ias_naturalstories_qwen3_5_9b_h5_final_stats.json
+!data/smoke/munch_smoke_subset.csv
+!environment/latest_end_to_end_planning.json
+!environment/qwen3_5_9b_environment.json
+!environment/tokenization_audit_summary.json
+!results/formal/
+results/formal/*
+!results/formal/20260908T224807Z/
