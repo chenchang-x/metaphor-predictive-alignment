@@ -1,0 +1,32 @@
+check,expected,observed,status,source,detail
+Pinned raw source hashes,verified,verified,PASS,vendor/metaphor-understanding-challenge/source_manifest.json,Validated by this project's validate_source_checkout before reconstruction
+Reconstructed retained rows match frozen table,True,True,PASS,data/processed/analysis_items.csv,"Every row, field, value and row order compared"
+Retained three-condition records,880,880,PASS,data/processed/analysis_items.csv; scripts/build_analysis_items.py,
+Target items,595,595,PASS,data/processed/analysis_items.csv; scripts/build_analysis_items.py,
+Source-sentence clusters,553,553,PASS,data/processed/analysis_items.csv; scripts/build_analysis_items.py,
+Excluded raw records,612,612,PASS,data/processed/analysis_items.csv; scripts/build_analysis_items.py,
+Every raw record retained or excluded once,1492,1492,PASS,data/processed/analysis_items.csv; scripts/build_analysis_items.py,
+RQ2 input-order rows,3520,3520,PASS,runs/formal/20260908T224807Z/direct/direct_judgement_order.csv,
+RQ2 unique triple-input-order keys,3520,3520,PASS,runs/formal/20260908T224807Z/direct/direct_judgement_order.csv,
+Context input recovers RQ1 metaphor prefix,1760,1760,PASS,runs/formal/20260908T224807Z/direct/direct_judgement_order.csv,"Remove target markup; compare exact characters with m_prefix_q3, not full m_sentence"
+Word-only input contains only marked target,1760,1760,PASS,runs/formal/20260908T224807Z/direct/direct_judgement_order.csv,
+Finite complete-response scores,7040,7040,PASS,runs/formal/20260908T224807Z/direct/direct_judgement_order.csv,
+Unambiguous contextual control items,12,12,PASS,runs/formal/20260908T224807Z/direct/direct_controls.csv,
+Positive contextual control items,12,12,PASS,runs/formal/20260908T224807Z/direct/direct_controls.csv,Observed 12/12; frozen passing threshold is fraction >= 0.60
+Frozen contextual control gate,>= 0.6,1.0,PASS,runs/formal/20260908T224807Z/direct/direct_judgement_summary.json,Word-only inputs have no correctness gate; this is an interface check
+Formal run input hash matches frozen table,e9282952a95f6a0b33a229c7bb4f9ab71496a2c7fafbf60af502917ef3a72f93,e9282952a95f6a0b33a229c7bb4f9ab71496a2c7fafbf60af502917ef3a72f93,PASS,runs/formal/20260908T224807Z/continuations/completion_summary.json,
+Completed continuation groups,7920,7920,PASS,runs/formal/20260908T224807Z/continuations/completion_summary.json,Recorded formal completion audit; this script does not rerun generation
+Stored continuations,253440,253440,PASS,runs/formal/20260908T224807Z/continuations/completion_summary.json,Recorded formal completion audit; this script does not rerun generation
+Missing continuation groups,0,0,PASS,runs/formal/20260908T224807Z/continuations/completion_summary.json,Recorded formal completion audit; this script does not rerun generation
+Duplicate continuation groups,0,0,PASS,runs/formal/20260908T224807Z/continuations/completion_summary.json,Recorded formal completion audit; this script does not rerun generation
+Unexpected continuation groups,0,0,PASS,runs/formal/20260908T224807Z/continuations/completion_summary.json,Recorded formal completion audit; this script does not rerun generation
+Distance table rows: triple_seed,2640,2640,PASS,runs/formal/20260908T224807Z/distances/qwen3p5_9b_formal_triple_seed_distances.csv,
+Distance table rows: triple,880,880,PASS,runs/formal/20260908T224807Z/distances/qwen3p5_9b_formal_triple_distances.csv,
+Distance table rows: sentence,595,595,PASS,runs/formal/20260908T224807Z/distances/qwen3p5_9b_formal_sentence_distances.csv,
+Merged RQ2 target rows,595,595,PASS,runs/formal/20260908T224807Z/rq2/rq2_items.csv,
+Merged RQ2 target IDs match material IDs,True,True,PASS,runs/formal/20260908T224807Z/rq2/rq2_items.csv,
+Context increment arithmetic,595,595,PASS,runs/formal/20260908T224807Z/rq2/rq2_items.csv,C = S_context - S_word; absolute tolerance 1e-12 nats
+Tokenizer boundary audit: rq1_raw_prefixes,2640,2640,PASS,environment/tokenization_audit_summary.json,Recorded tokenizer audit; not recomputed by this script
+Tokenizer boundary audit: rq2_chat_a_b_append_boundaries,3520,3520,PASS,environment/tokenization_audit_summary.json,Recorded tokenizer audit; not recomputed by this script
+Tokenizer boundary audit: surprisal_context_q3_boundaries,1760,1760,PASS,environment/tokenization_audit_summary.json,Recorded tokenizer audit; not recomputed by this script
+Tokenizer boundary audit: surprisal_shared_a_i_q3_suffix,880,880,PASS,environment/tokenization_audit_summary.json,Recorded tokenizer audit; not recomputed by this script

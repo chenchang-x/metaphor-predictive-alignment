@@ -1,0 +1,7 @@
+stage,rule,retained_records,excluded_at_stage,reason_code,provenance
+0,Raw judgement records,1492,0,,Reconstructed from project-local pinned raw files using build_records
+1,Exactly one apt and one inapt label,1072,420,LABEL_NOT_ONE_APT_ONE_INAPT,Reconstructed from project-local pinned raw files using build_records
+2,Valid target markup in all three conditions,1072,0,MALFORMED_TARGET_MARKUP,Reconstructed from project-local pinned raw files using build_records
+3,Identical non-target context,1046,26,UNRESOLVED_NON_TARGET_CONTEXT_MISMATCH,Reconstructed from project-local pinned raw files using build_records
+4,At least three shared post-target words,880,166,INSUFFICIENT_SHARED_RIGHT_CONTEXT,Reconstructed from project-local pinned raw files using build_records
+5,Remove exact duplicate records,880,0,EXACT_DUPLICATE_RECORD,Reconstructed from project-local pinned raw files using build_records

@@ -1,0 +1,180 @@
+{
+  "direct_run_id": "munch-qwen3p5-9b-direct-20260908T234925Z",
+  "interpretation": "beta_total is the total contextual association. gamma_C is the context-linked association conditional on P_word. Neither is causal or a pure metaphor-interpretation effect.",
+  "models": {
+    "M0_total_association": {
+      "coefficients": {
+        "beta_0": {
+          "confidence_interval_95": {
+            "critical_value": 1.9642708556448771,
+            "degrees_of_freedom": 552,
+            "lower": 0.0036039161089818383,
+            "reference_distribution": "Student t",
+            "sidedness": "two-sided",
+            "upper": 0.011067602374453726
+          },
+          "cr1_standard_error": 0.0018998617843417353,
+          "estimate": 0.007335759241717782,
+          "test": {
+            "alternative_hypothesis": "beta_0 != 0",
+            "degrees_of_freedom": 552,
+            "null_hypothesis": "beta_0 = 0",
+            "p_value": 0.00012619063288879574,
+            "p_value_sidedness": "two-sided",
+            "reference_distribution": "Student t",
+            "t_statistic": 3.8612068005038997
+          }
+        },
+        "beta_total": {
+          "confidence_interval_95": {
+            "critical_value": 1.9642708556448771,
+            "degrees_of_freedom": 552,
+            "lower": 0.0020316218549488087,
+            "reference_distribution": "Student t",
+            "sidedness": "two-sided",
+            "upper": 0.004466841174179989
+          },
+          "cr1_standard_error": 0.0006198786975413553,
+          "estimate": 0.003249231514564399,
+          "test": {
+            "alternative_hypothesis": "beta_total != 0",
+            "degrees_of_freedom": 552,
+            "null_hypothesis": "beta_total = 0",
+            "p_value": 2.2686130173477185e-07,
+            "p_value_sidedness": "two-sided",
+            "reference_distribution": "Student t",
+            "t_statistic": 5.241721529473314
+          }
+        }
+      },
+      "covariance": "one-way CR1 clustered by source_sid",
+      "covariance_matrix": [
+        [
+          3.609474799602162e-06,
+          -8.940631487910165e-07
+        ],
+        [
+          -8.940631487910165e-07,
+          3.8424959966556703e-07
+        ]
+      ],
+      "cr1_finite_sample_correction": 1.003500989808637,
+      "degrees_of_freedom": 552,
+      "estimation": "ordinary least squares",
+      "formula": "Delta_i = beta_0 + beta_total P_context_i + epsilon_i",
+      "n_clusters": 553,
+      "n_observations": 595,
+      "r_squared": 0.040170435248517156
+    },
+    "M1_context_decomposition": {
+      "coefficients": {
+        "gamma_0": {
+          "confidence_interval_95": {
+            "critical_value": 1.9642708556448771,
+            "degrees_of_freedom": 552,
+            "lower": 0.00452288621060662,
+            "reference_distribution": "Student t",
+            "sidedness": "two-sided",
+            "upper": 0.012434853673066217
+          },
+          "cr1_standard_error": 0.0020139705885576734,
+          "estimate": 0.008478869941836418,
+          "test": {
+            "alternative_hypothesis": "gamma_0 != 0",
+            "degrees_of_freedom": 552,
+            "null_hypothesis": "gamma_0 = 0",
+            "p_value": 2.9809002628355804e-05,
+            "p_value_sidedness": "two-sided",
+            "reference_distribution": "Student t",
+            "t_statistic": 4.210026695528186
+          }
+        },
+        "gamma_C": {
+          "confidence_interval_95": {
+            "critical_value": 1.9642708556448771,
+            "degrees_of_freedom": 552,
+            "lower": 0.001283390360179926,
+            "reference_distribution": "Student t",
+            "sidedness": "two-sided",
+            "upper": 0.0039387276519803425
+          },
+          "cr1_standard_error": 0.0006759091507593184,
+          "estimate": 0.0026110590060801344,
+          "test": {
+            "alternative_hypothesis": "gamma_C != 0",
+            "degrees_of_freedom": 552,
+            "null_hypothesis": "gamma_C = 0",
+            "p_value": 0.00012527566239676517,
+            "p_value_sidedness": "two-sided",
+            "reference_distribution": "Student t",
+            "t_statistic": 3.8630324846865336
+          }
+        },
+        "gamma_W": {
+          "confidence_interval_95": {
+            "critical_value": 1.9642708556448771,
+            "degrees_of_freedom": 552,
+            "lower": 0.002395507098267966,
+            "reference_distribution": "Student t",
+            "sidedness": "two-sided",
+            "upper": 0.00506531666948179
+          },
+          "cr1_standard_error": 0.0006795930315672571,
+          "estimate": 0.003730411883874878,
+          "test": {
+            "alternative_hypothesis": "gamma_W != 0",
+            "degrees_of_freedom": 552,
+            "null_hypothesis": "gamma_W = 0",
+            "p_value": 6.164160789665479e-08,
+            "p_value_sidedness": "two-sided",
+            "reference_distribution": "Student t",
+            "t_statistic": 5.4891850130833655
+          }
+        }
+      },
+      "covariance": "one-way CR1 clustered by source_sid",
+      "covariance_matrix": [
+        [
+          4.056077531575342e-06,
+          -1.0832050964171069e-06,
+          -7.289362106662623e-07
+        ],
+        [
+          -1.0832050964171069e-06,
+          4.5685318008018296e-07,
+          3.085901029547029e-07
+        ],
+        [
+          -7.289362106662623e-07,
+          3.085901029547029e-07,
+          4.618466885547749e-07
+        ]
+      ],
+      "cr1_finite_sample_correction": 1.005196092831962,
+      "degrees_of_freedom": 552,
+      "estimation": "ordinary least squares",
+      "formula": "Delta_i = gamma_0 + gamma_C C_i + gamma_W P_word_i + epsilon_i",
+      "n_clusters": 553,
+      "n_observations": 595,
+      "r_squared": 0.04620436285263929
+    },
+    "c_i_sign_counts": {
+      "negative": 116,
+      "positive": 479
+    },
+    "degrees_of_freedom": 552,
+    "interpretation_gate": "M1 cannot rescue RQ2 if M0 does not support the total association",
+    "n_clusters": 553,
+    "n_observations": 595,
+    "p_context_i_sign_counts": {
+      "negative": 88,
+      "positive": 504,
+      "zero": 3
+    },
+    "shared_sample": true
+  },
+  "research_question": "Does contextual direct apt preference covary with downstream alignment, and does its context-linked component add information beyond target-only preference?",
+  "run_id": "munch-qwen3p5-9b-rq2-20260908T235343Z",
+  "schema": "munch-qwen3.5-9b-matched-rq2-results/v2",
+  "status": "pass"
+}

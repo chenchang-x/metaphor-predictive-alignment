@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="518.740157pt" height="212.598425pt" viewBox="0 0 518.740157 212.598425" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-11T14:55:17.175175</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 212.598425 
+L 518.740157 212.598425 
+L 518.740157 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="table_1">
+    <g id="patch_2">
+     <path d="M 18.155906 67.181102 
+L 182.181543 67.181102 
+M 182.181543 44.645669 
+L 18.155906 44.645669 
+M 18.155906 67.181102 
+" style="fill: #ffffff; stroke: #637678; stroke-width: 0.7; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_1">
+     <text style="font-weight: 700; font-size: 8.5px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #293c3e" x="27.177316" y="58.113093" transform="rotate(-0 27.177316 58.113093)">Genre</text>
+    </g>
+    <g id="patch_3">
+     <path d="M 182.181543 67.181102 
+L 288.31578 67.181102 
+M 288.31578 44.645669 
+L 182.181543 44.645669 
+M 182.181543 67.181102 
+" style="fill: #ffffff; stroke: #637678; stroke-width: 0.7; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_2">
+     <text style="font-weight: 700; font-size: 8.5px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #293c3e" x="282.478397" y="58.113093" transform="rotate(-0 282.478397 58.113093)">Source sentences</text>
+    </g>
+    <g id="patch_4">
+     <path d="M 288.31578 67.181102 
+L 394.450016 67.181102 
+M 394.450016 44.645669 
+L 288.31578 44.645669 
+M 288.31578 67.181102 
+" style="fill: #ffffff; stroke: #637678; stroke-width: 0.7; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_3">
+     <text style="font-weight: 700; font-size: 8.5px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #293c3e" x="388.612633" y="58.11301" transform="rotate(-0 388.612633 58.11301)">Target items</text>
+    </g>
+    <g id="patch_5">
+     <path d="M 394.450016 67.181102 
+L 500.584252 67.181102 
+M 500.584252 44.645669 
+L 394.450016 44.645669 
+M 394.450016 67.181102 
+" style="fill: #ffffff; stroke: #637678; stroke-width: 0.7; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_4">
+     <text style="font-weight: 700; font-size: 8.5px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #293c3e" x="494.746869" y="58.113093" transform="rotate(-0 494.746869 58.113093)">M/A/I triples</text>
+    </g>
+    <g id="patch_6">
+     <path d="M 18.155906 89.716535 
+M 182.181543 89.716535 
+M 182.181543 67.181102 
+M 18.155906 67.181102 
+M 18.155906 89.716535 
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_5">
+     <text style="font-size: 8.5px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #293c3e" x="27.177316" y="80.648526" transform="rotate(-0 27.177316 80.648526)">Academic prose</text>
+    </g>
+    <g id="patch_7">
+     <path d="M 182.181543 89.716535 
+M 288.31578 89.716535 
+M 288.31578 67.181102 
+M 182.181543 67.181102 
+M 182.181543 89.716535 
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 8.5px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #293c3e" x="282.478397" y="80.648526" transform="rotate(-0 282.478397 80.648526)">241</text>
+    </g>
+    <g id="patch_8">
+     <path d="M 288.31578 89.716535 
+M 394.450016 89.716535 
+M 394.450016 67.181102 
+M 288.31578 67.181102 
+M 288.31578 89.716535 
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 8.5px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #293c3e" x="388.612633" y="80.648526" transform="rotate(-0 388.612633 80.648526)">264</text>
+    </g>
+    <g id="patch_9">
+     <path d="M 394.450016 89.716535 
+M 500.584252 89.716535 
+M 500.584252 67.181102 
+M 394.450016 67.181102 
+M 394.450016 89.716535 
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_8">
+     <text style="font-size: 8.5px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #293c3e" x="494.746869" y="80.648526" transform="rotate(-0 494.746869 80.648526)">385</text>
+    </g>
+    <g id="patch_10">
+     <path d="M 18.155906 112.251969 
+M 182.181543 112.251969 
+M 182.181543 89.716535 
+M 18.155906 89.716535 
+M 18.155906 112.251969 
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_9">
+     <text style="font-size: 8.5px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #293c3e" x="27.177316" y="103.183959" transform="rotate(-0 27.177316 103.183959)">Fiction</text>
+    </g>
+    <g id="patch_11">
+     <path d="M 182.181543 112.251969 
+M 288.31578 112.251969 
+M 288.31578 89.716535 
+M 182.181543 89.716535 
+M 182.181543 112.251969 
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_10">
+     <text style="font-size: 8.5px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #293c3e" x="282.478397" y="103.183959" transform="rotate(-0 282.478397 103.183959)">82</text>
+    </g>
+    <g id="patch_12">
+     <path d="M 288.31578 112.251969 
+M 394.450016 112.251969 
+M 394.450016 89.716535 
+M 288.31578 89.716535 
+M 288.31578 112.251969 
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_11">
+     <text style="font-size: 8.5px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #293c3e" x="388.612633" y="103.183959" transform="rotate(-0 388.612633 103.183959)">86</text>
+    </g>
+    <g id="patch_13">
+     <path d="M 394.450016 112.251969 
+M 500.584252 112.251969 
+M 500.584252 89.716535 
+M 394.450016 89.716535 
+M 394.450016 112.251969 
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 8.5px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #293c3e" x="494.746869" y="103.183959" transform="rotate(-0 494.746869 103.183959)">134</text>
+    </g>
+    <g id="patch_14">
+     <path d="M 18.155906 134.787402 
+M 182.181543 134.787402 
+M 182.181543 112.251969 
+M 18.155906 112.251969 
+M 18.155906 134.787402 
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_13">
+     <text style="font-size: 8.5px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #293c3e" x="27.177316" y="125.719392" transform="rotate(-0 27.177316 125.719392)">News</text>
+    </g>
+    <g id="patch_15">
+     <path d="M 182.181543 134.787402 
+M 288.31578 134.787402 
+M 288.31578 112.251969 
+M 182.181543 112.251969 
+M 182.181543 134.787402 
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_14">
+     <text style="font-size: 8.5px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #293c3e" x="282.478397" y="125.719392" transform="rotate(-0 282.478397 125.719392)">230</text>
+    </g>
+    <g id="patch_16">
+     <path d="M 288.31578 134.787402 
+M 394.450016 134.787402 
+M 394.450016 112.251969 
+M 288.31578 112.251969 
+M 288.31578 134.787402 
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_15">
+     <text style="font-size: 8.5px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #293c3e" x="388.612633" y="125.719392" transform="rotate(-0 388.612633 125.719392)">245</text>
+    </g>
+    <g id="patch_17">
+     <path d="M 394.450016 134.787402 
+M 500.584252 134.787402 
+M 500.584252 112.251969 
+M 394.450016 112.251969 
+M 394.450016 134.787402 
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_16">
+     <text style="font-size: 8.5px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #293c3e" x="494.746869" y="125.719392" transform="rotate(-0 494.746869 125.719392)">361</text>
+    </g>
+    <g id="patch_18">
+     <path d="M 18.155906 157.322835 
+L 182.181543 157.322835 
+M 182.181543 134.787402 
+M 18.155906 134.787402 
+M 18.155906 157.322835 
+" style="fill: #ffffff; stroke: #637678; stroke-width: 0.7; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_17">
+     <text style="font-size: 8.5px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #293c3e" x="27.177316" y="148.254825" transform="rotate(-0 27.177316 148.254825)">Total</text>
+    </g>
+    <g id="patch_19">
+     <path d="M 182.181543 157.322835 
+L 288.31578 157.322835 
+M 288.31578 134.787402 
+M 182.181543 134.787402 
+M 182.181543 157.322835 
+" style="fill: #ffffff; stroke: #637678; stroke-width: 0.7; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_18">
+     <text style="font-size: 8.5px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #293c3e" x="282.478397" y="148.254825" transform="rotate(-0 282.478397 148.254825)">553</text>
+    </g>
+    <g id="patch_20">
+     <path d="M 288.31578 157.322835 
+L 394.450016 157.322835 
+M 394.450016 134.787402 
+M 288.31578 134.787402 
+M 288.31578 157.322835 
+" style="fill: #ffffff; stroke: #637678; stroke-width: 0.7; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_19">
+     <text style="font-size: 8.5px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #293c3e" x="388.612633" y="148.254825" transform="rotate(-0 388.612633 148.254825)">595</text>
+    </g>
+    <g id="patch_21">
+     <path d="M 394.450016 157.322835 
+L 500.584252 157.322835 
+M 500.584252 134.787402 
+M 394.450016 134.787402 
+M 394.450016 157.322835 
+" style="fill: #ffffff; stroke: #637678; stroke-width: 0.7; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_20">
+     <text style="font-size: 8.5px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #293c3e" x="494.746869" y="148.254825" transform="rotate(-0 494.746869 148.254825)">880</text>
+    </g>
+   </g>
+  </g>
+  <g id="text_21">
+   <text style="font-weight: 700; font-size: 10px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #293c3e" x="18.155906" y="26.414132" transform="rotate(-0 18.155906 26.414132)">Table 1 | Retained materials by genre</text>
+  </g>
+  <g id="text_22">
+   <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; fill: #293c3e" transform="translate(18.155906 182.406959)">Source sentence: source_sid. Target item: sentence_id, with a marked target.</text>
+   <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; fill: #293c3e" transform="translate(18.155906 194.466334)">Each M/A/I triple contains one metaphor and its two candidate substitutions.</text>
+  </g>
+ </g>
+</svg>

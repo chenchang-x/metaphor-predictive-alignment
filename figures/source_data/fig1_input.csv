@@ -1,0 +1,8 @@
+triple_id,sentence_id,source_sid,task,condition,candidate_order,task_input,option_a,option_b
+munch-judgement-1232,8609,ccw-fragment03-1568,continuation,M,,We caught the bus back,,
+munch-judgement-1232,8609,ccw-fragment03-1568,continuation,A,,We took the bus back,,
+munch-judgement-1232,8609,ccw-fragment03-1568,continuation,I,,We grabbed the bus back,,
+munch-judgement-1232,8609,ccw-fragment03-1568,explicit judgement,context,AI,We [TARGET: caught] the bus back,took,grabbed
+munch-judgement-1232,8609,ccw-fragment03-1568,explicit judgement,context,IA,We [TARGET: caught] the bus back,grabbed,took
+munch-judgement-1232,8609,ccw-fragment03-1568,explicit judgement,word,AI,[TARGET: caught],took,grabbed
+munch-judgement-1232,8609,ccw-fragment03-1568,explicit judgement,word,IA,[TARGET: caught],grabbed,took

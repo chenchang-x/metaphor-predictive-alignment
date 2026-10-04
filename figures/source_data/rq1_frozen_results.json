@@ -1,0 +1,59 @@
+{
+  "descriptive": {
+    "effect_sign_counts": {
+      "negative": 182,
+      "positive": 413
+    },
+    "m_a_distance": {
+      "maximum": 0.9577315350373585,
+      "mean": 0.7741731166928645,
+      "median": 0.7975783944129944,
+      "minimum": 0.1165190984805425,
+      "n": 595,
+      "sample_standard_deviation": 0.12354201054295434
+    },
+    "m_i_distance": {
+      "maximum": 0.9988388617833456,
+      "mean": 0.7884382091233042,
+      "median": 0.810973862806956,
+      "minimum": 0.13908259570598602,
+      "n": 595,
+      "sample_standard_deviation": 0.12092258350774468
+    },
+    "mi_minus_ma": {
+      "maximum": 0.2149206201235453,
+      "mean": 0.014265092430439762,
+      "median": 0.009417871634165409,
+      "minimum": -0.11904609203338623,
+      "n": 595,
+      "sample_standard_deviation": 0.031855330382757494
+    }
+  },
+  "estimand": "equal target-item mean of distance(M,I)-distance(M,A)",
+  "primary_effect": {
+    "confidence_interval_95_two_sided": {
+      "critical_value": 1.9642708556448771,
+      "degrees_of_freedom": 552,
+      "lower": 0.011769376387701543,
+      "reference_distribution": "Student t",
+      "upper": 0.01676080847317798
+    },
+    "cr1_standard_error": 0.0012705559600225632,
+    "cr1_variance": 1.6143124475488571e-06,
+    "directional_test": {
+      "alternative_hypothesis": "theta > 0",
+      "degrees_of_freedom": 552,
+      "null_hypothesis": "theta <= 0",
+      "p_value_one_sided_upper": 8.663976705243419e-27,
+      "t_statistic": 11.227441277113394
+    },
+    "estimate": 0.014265092430439762,
+    "n_source_clusters": 553,
+    "n_target_items": 595,
+    "source_cluster_averaging": false
+  },
+  "run_id": "munch-qwen3p5-9b-20260908T224851Z-9fd86dafddf5",
+  "schema": "munch-qwen3.5-9b-primary-analysis-results/v1",
+  "scope": "frozen primary continuation analysis only",
+  "status": "pass"
+}

@@ -1,0 +1,3 @@
+panel,statistic,r,n_items,n_source_sentences,adjustment
+a,Pearson correlation,-0.001022984384323707,595,553,none
+b,Partial Pearson correlation,0.14553819173193439,595,553,Both variables residualized against an intercept and measured word-only preference
