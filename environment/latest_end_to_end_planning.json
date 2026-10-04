@@ -1,0 +1,321 @@
+{
+  "excluded": [
+    "Pod provisioning and queue time",
+    "bootstrap dependency installation",
+    "model download",
+    "reference-statistics build completed during smoke",
+    "upload and result download"
+  ],
+  "gpu_memory_gate": {
+    "action_if_exceeded": "repeat bootstrap and smoke on a larger single GPU; prefer a 48 GiB L40S, RTX A6000, or A40 after a 32 GiB RTX 5090 fails; scientific parameters remain unchanged",
+    "allocated_bytes_after_generation": 17941189632,
+    "decision_metric": "gpu_memory_probe.peak_reserved_bytes",
+    "headroom_at_threshold_bytes": 2694378947,
+    "headroom_at_threshold_gib": 2.509335937909782,
+    "maximum_reserved_fraction": 0.92,
+    "minimum_free_headroom_bytes": 2147483648,
+    "minimum_free_headroom_gib": 2.0,
+    "peak_allocated_bytes": 20767204864,
+    "peak_reserved_bytes": 21011365888,
+    "peak_reserved_fraction_of_total": 0.6238577810987095,
+    "peak_reserved_gib": 19.568359375,
+    "probe": {
+      "allocated_bytes_after_generation": 17941189632,
+      "condition": "A",
+      "h_qwen_tokens": 5,
+      "i0": 1455,
+      "measurement": "exact longest raw M/A/I prefix in the benchmark input; one real RQ1 generate call after reset_peak_memory_stats",
+      "num_return_sequences": 32,
+      "peak_allocated_bytes": 20767204864,
+      "peak_reserved_bytes": 21011365888,
+      "prefix_token_count": 100,
+      "reserved_bytes_after_generation": 21011365888,
+      "triple_id": "munch-judgement-1455"
+    },
+    "runtime_identity": {
+      "cuda_runtime": "12.8",
+      "gpu_name": "NVIDIA GeForce RTX 5090",
+      "gpu_total_memory_bytes": 33679736832,
+      "torch": "2.8.0+cu128"
+    },
+    "status": "pass",
+    "threshold_bytes": 30985357885,
+    "threshold_gib": 28.857363280840218,
+    "threshold_policy": "min(total_memory_bytes - 2 GiB, floor(0.92 * total_memory_bytes))",
+    "total_memory_bytes": 33679736832,
+    "total_memory_gib": 31.36669921875
+  },
+  "inputs": {
+    "auxiliary_selection": {
+      "rq2_direct_judgement": {
+        "benchmark_items": 12,
+        "i0s": [
+          117,
+          1474,
+          849,
+          743,
+          515,
+          766,
+          251,
+          1290,
+          890,
+          606,
+          1485,
+          1455
+        ],
+        "longest_item": {
+          "i0": 1455,
+          "token_length": 157,
+          "triple_id": "munch-judgement-1455"
+        },
+        "method": "equally spaced ranks after stable sort by tokenizer length and i0; includes shortest and exact longest",
+        "population_items": 880,
+        "population_token_length_range": [
+          61,
+          157
+        ],
+        "token_lengths": [
+          61,
+          63,
+          65,
+          67,
+          70,
+          73,
+          77,
+          79,
+          84,
+          89,
+          97,
+          157
+        ],
+        "triple_ids": [
+          "munch-judgement-117",
+          "munch-judgement-1474",
+          "munch-judgement-849",
+          "munch-judgement-743",
+          "munch-judgement-515",
+          "munch-judgement-766",
+          "munch-judgement-251",
+          "munch-judgement-1290",
+          "munch-judgement-890",
+          "munch-judgement-606",
+          "munch-judgement-1485",
+          "munch-judgement-1455"
+        ]
+      },
+      "surprisal": {
+        "benchmark_items": 12,
+        "i0s": [
+          117,
+          1474,
+          993,
+          878,
+          736,
+          448,
+          343,
+          1441,
+          890,
+          911,
+          980,
+          1455
+        ],
+        "longest_item": {
+          "i0": 1455,
+          "token_length": 100,
+          "triple_id": "munch-judgement-1455"
+        },
+        "method": "equally spaced ranks after stable sort by tokenizer length and i0; includes shortest and exact longest",
+        "population_items": 880,
+        "population_token_length_range": [
+          5,
+          100
+        ],
+        "token_lengths": [
+          5,
+          7,
+          9,
+          11,
+          14,
+          17,
+          21,
+          23,
+          28,
+          33,
+          41,
+          100
+        ],
+        "triple_ids": [
+          "munch-judgement-117",
+          "munch-judgement-1474",
+          "munch-judgement-993",
+          "munch-judgement-878",
+          "munch-judgement-736",
+          "munch-judgement-448",
+          "munch-judgement-343",
+          "munch-judgement-1441",
+          "munch-judgement-890",
+          "munch-judgement-911",
+          "munch-judgement-980",
+          "munch-judgement-1455"
+        ]
+      }
+    },
+    "formal_items": 880,
+    "model_load_proxy_seconds": {
+      "continuation_and_distance": 40.54016216099262,
+      "formal_total_for_four_loads": 170.3289070352912,
+      "surprisal_and_rq2": 44.624291356652975
+    },
+    "rq2_control_items": 12,
+    "safety_factor": 1.2,
+    "smoke_items": 3,
+    "stage_timings": {
+      "auxiliary_benchmarks": {
+        "elapsed_seconds": 50.932612267,
+        "status": "pass"
+      },
+      "continuation_benchmark": {
+        "elapsed_seconds": 80.34959868,
+        "status": "pass"
+      },
+      "distance_smoke": {
+        "elapsed_seconds": 44.868308559,
+        "status": "pass"
+      },
+      "reference_build": {
+        "elapsed_seconds": 68.848709233,
+        "status": "pass"
+      },
+      "reference_validation": {
+        "elapsed_seconds": 0.437152736,
+        "status": "pass"
+      },
+      "rq1_generation_smoke": {
+        "elapsed_seconds": 49.502603691,
+        "status": "pass"
+      },
+      "rq2_controls": {
+        "elapsed_seconds": 43.384455286,
+        "status": "pass"
+      },
+      "surprisal_smoke": {
+        "elapsed_seconds": 38.572162329,
+        "status": "pass"
+      }
+    }
+  },
+  "method": {
+    "cpu_postprocessing_allowance_seconds": 300.0,
+    "model_load_invocations": 4,
+    "planning_upper_rule": "continuation uses its slowest-block upper; distance subtracts one load proxy before scaling compute by 880/3 and the safety factor; surprisal and RQ2 scale their representative compute by the safety factor; RQ2 controls remain one fixed unsubtracted overhead; each stage adds one load proxy",
+    "point_rule": "continuation uses its benchmark; distance subtracts one generation load proxy from smoke; surprisal and RQ2 scale compute-only timing from separate 12-item formal-input length quantiles; every GPU stage then adds one measured load proxy",
+    "reference_statistics": "built during smoke when absent and reused by formal; validation time is included, reference build time is excluded"
+  },
+  "schema": "munch-qwen3.5-9b-end-to-end-runtime-plan/v3",
+  "scope": "formal.sh after bootstrap and a successful smoke; through primary and RQ2 analysis outputs",
+  "stages": {
+    "continuation": {
+      "formal_units": 880,
+      "model_load_proxy_seconds_added_once": 40.54016216099262,
+      "planning_upper": {
+        "rule": "slowest block x full item count x 1.20, plus model load",
+        "total_seconds": 3399.1832346767187
+      },
+      "point": {
+        "compute_seconds": 2547.614450429877,
+        "total_seconds": 2588.1546125908694
+      },
+      "source": "generation_speed_benchmark.json",
+      "stage": "continuation"
+    },
+    "cpu_primary_and_rq2_analysis": {
+      "allowance_seconds": 300.0
+    },
+    "distance": {
+      "formal_units": 880,
+      "model_load_proxy_seconds_added_once": 40.54016216099262,
+      "observed": {
+        "units": 3,
+        "wall_seconds_including_model_load": 44.868308559
+      },
+      "planning_upper": {
+        "compute_seconds": 1523.5075320985964,
+        "load_treatment": "subtract one load proxy before scaling smoke compute; multiply compute by formal/smoke units and the safety factor; then add one formal load proxy",
+        "total_seconds": 1564.047694259589
+      },
+      "point": {
+        "compute_seconds": 1269.5896100821637,
+        "compute_seconds_per_unit": 1.4427154660024588,
+        "load_subtracted_smoke_compute_seconds": 4.328146398007377,
+        "load_subtraction_clipped_at_zero": false,
+        "total_seconds": 1310.1297722431564
+      },
+      "stage": "distance"
+    },
+    "reference_validation": {
+      "planning_upper_seconds": 0.5245832831999999,
+      "point_seconds": 0.437152736
+    },
+    "rq2_direct_judgement": {
+      "formal_control_gate": {
+        "controls": 12,
+        "controls_are_fixed_overhead_and_are_not_extrapolated_to_MUNCH_items": true,
+        "point_compute_after_load_proxy_subtraction": 0.0,
+        "smoke_wall_seconds_including_load": 43.384455286,
+        "upper_uses_unsubtracted_control_wall_seconds": 43.384455286
+      },
+      "formal_units": 880,
+      "model_load_proxy_seconds_added_once": 44.624291356652975,
+      "observed": {
+        "compute_seconds_with_model_already_loaded": 3.7451370544731617,
+        "seconds_per_unit": 0.31209475453943014,
+        "units": 12
+      },
+      "planning_upper": {
+        "compute_seconds": 381.63340713683823,
+        "fixed_compute_seconds": 52.06134634319999,
+        "rule": "representative compute x formal/sample units x safety factor, plus one model load",
+        "scaled_munch_compute_seconds": 329.57206079363823,
+        "total_seconds": 426.2576984934912
+      },
+      "point": {
+        "compute_seconds": 274.6433839946985,
+        "fixed_compute_seconds": 0.0,
+        "scaled_munch_compute_seconds": 274.6433839946985,
+        "total_seconds": 319.2676753513515
+      },
+      "source": "12 representative formal analysis_items selected by token length",
+      "stage": "rq2_direct_judgement"
+    },
+    "surprisal": {
+      "formal_units": 880,
+      "model_load_proxy_seconds_added_once": 44.624291356652975,
+      "observed": {
+        "compute_seconds_with_model_already_loaded": 0.30285681784152985,
+        "seconds_per_unit": 0.02523806815346082,
+        "units": 12
+      },
+      "planning_upper": {
+        "compute_seconds": 26.651399970054623,
+        "fixed_compute_seconds": 0.0,
+        "rule": "representative compute x formal/sample units x safety factor, plus one model load",
+        "scaled_munch_compute_seconds": 26.651399970054623,
+        "total_seconds": 71.2756913267076
+      },
+      "point": {
+        "compute_seconds": 22.20949997504552,
+        "fixed_compute_seconds": 0.0,
+        "scaled_munch_compute_seconds": 22.20949997504552,
+        "total_seconds": 66.83379133169849
+      },
+      "source": "12 representative formal analysis_items selected by token length",
+      "stage": "surprisal"
+    }
+  },
+  "total": {
+    "planning_upper_hours": 1.6003580283443628,
+    "planning_upper_seconds": 5761.288902039706,
+    "point_hours": 1.2735619456258545,
+    "point_seconds": 4584.823004253076
+  }
+}

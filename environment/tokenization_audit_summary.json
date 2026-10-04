@@ -1,0 +1,50 @@
+{
+  "checks": {
+    "rq1_raw_prefixes": {
+      "cases": 2640,
+      "failed": 0,
+      "passed": 2640
+    },
+    "rq2_chat_a_b_append_boundaries": {
+      "cases": 3520,
+      "failed": 0,
+      "passed": 3520
+    },
+    "surprisal_context_q3_boundaries": {
+      "cases": 1760,
+      "failed": 0,
+      "passed": 1760
+    },
+    "surprisal_shared_a_i_q3_suffix": {
+      "cases": 880,
+      "failed": 0,
+      "passed": 880
+    }
+  },
+  "coverage": {
+    "failed_rows_retained": true,
+    "rows_audited": 880,
+    "rows_received": 880,
+    "rows_removed": 0,
+    "sentence_ids": 595,
+    "source_sids": 553
+  },
+  "failures": {
+    "by_code": {},
+    "issue_count": 0,
+    "issues": [],
+    "rows": []
+  },
+  "interfaces": {
+    "rq1": "raw causal prefixes; add_special_tokens=False; no chat template",
+    "rq2": "matched context/word inputs; official chat template; one user message; generation prompt; complete A/B responses",
+    "surprisal": "raw A/I target-ending context plus identical q3 text"
+  },
+  "model": {
+    "identifier": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+  },
+  "schema": "munch-qwen3.5-9b-tokenization-audit/v2",
+  "status": "pass",
+  "tokenizer_class": "Qwen2Tokenizer"
+}

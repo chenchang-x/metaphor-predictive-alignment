@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/glnmario/ias-lang-comp.git",
+  "upstream_commit": "b2b54eb3bb7decf46b7eff27e61d8b5306f04355",
+  "files": {
+    "texts_400words.csv": {
+      "source_path": "data/corpora/naturalstories/texts_400words.csv",
+      "sha256": "5747a7de60b3b2d6ae5dbb1934b2e47c4ef17ce8eb86cd7473c75cf449db437b"
+    }
+  }
+}

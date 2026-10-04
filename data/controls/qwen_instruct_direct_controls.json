@@ -1,0 +1,102 @@
+{
+  "schema": "munch-qwen3.5-9b-direct-controls/v1",
+  "description": "Twelve project-local, unambiguous English controls for the RQ2 chat-scoring interface.",
+  "controls": [
+    {
+      "control_id": "control-01",
+      "left_context": "After hearing the cruel accusation, Daniel ",
+      "m_word": "exploded",
+      "q3_right_context": " in furious protest",
+      "apt_candidate": "became extremely angry",
+      "inapt_candidate": "burst into physical pieces"
+    },
+    {
+      "control_id": "control-02",
+      "left_context": "With sixty unanswered emails and five reports due, Maya was ",
+      "m_word": "drowning",
+      "q3_right_context": " under urgent deadlines",
+      "apt_candidate": "overwhelmed with too much work",
+      "inapt_candidate": "submerged under water"
+    },
+    {
+      "control_id": "control-03",
+      "left_context": "After comparing every fingerprint, the detective finally ",
+      "m_word": "cracked",
+      "q3_right_context": " the difficult case",
+      "apt_candidate": "solved the mystery",
+      "inapt_candidate": "physically broke the case"
+    },
+    {
+      "control_id": "control-04",
+      "left_context": "Although she had only one short scene, the young actor ",
+      "m_word": "stole",
+      "q3_right_context": " the entire show",
+      "apt_candidate": "attracted the most attention",
+      "inapt_candidate": "took property without permission"
+    },
+    {
+      "control_id": "control-05",
+      "left_context": "We enjoyed the holiday so much that the week ",
+      "m_word": "flew",
+      "q3_right_context": " by very quickly",
+      "apt_candidate": "passed surprisingly quickly",
+      "inapt_candidate": "moved through the air"
+    },
+    {
+      "control_id": "control-06",
+      "left_context": "With mentoring and careful planning, her rough idea ",
+      "m_word": "blossomed",
+      "q3_right_context": " into a business",
+      "apt_candidate": "developed successfully",
+      "inapt_candidate": "produced flowers"
+    },
+    {
+      "control_id": "control-07",
+      "left_context": "He spoke calmly, but his harsh criticism ",
+      "m_word": "cut",
+      "q3_right_context": " her very deeply",
+      "apt_candidate": "caused severe emotional pain",
+      "inapt_candidate": "sliced her with a blade"
+    },
+    {
+      "control_id": "control-08",
+      "left_context": "Restaurants, trains, and clubs remain busy all night because this city never ",
+      "m_word": "sleeps",
+      "q3_right_context": " even after midnight",
+      "apt_candidate": "becomes quiet or inactive",
+      "inapt_candidate": "rests in unconscious sleep"
+    },
+    {
+      "control_id": "control-09",
+      "left_context": "Neither side would compromise, so the negotiations ",
+      "m_word": "hit",
+      "q3_right_context": " a solid wall",
+      "apt_candidate": "encountered an obstacle",
+      "inapt_candidate": "struck a physical surface"
+    },
+    {
+      "control_id": "control-10",
+      "left_context": "Despite repeated failures, a small amount of hope still ",
+      "m_word": "flickered",
+      "q3_right_context": " through those months",
+      "apt_candidate": "remained faint and uncertain",
+      "inapt_candidate": "flashed as visible light"
+    },
+    {
+      "control_id": "control-11",
+      "left_context": "The unexpected policy announcement immediately ",
+      "m_word": "ignited",
+      "q3_right_context": " debate across campus",
+      "apt_candidate": "triggered an intense discussion",
+      "inapt_candidate": "set the debate on fire"
+    },
+    {
+      "control_id": "control-12",
+      "left_context": "Everyone stopped moving when the judge entered; the room ",
+      "m_word": "froze",
+      "q3_right_context": " in sudden silence",
+      "apt_candidate": "became completely still",
+      "inapt_candidate": "turned into ice"
+    }
+  ]
+}

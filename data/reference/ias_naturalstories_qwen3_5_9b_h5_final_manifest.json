@@ -1,0 +1,227 @@
+{
+  "blind_reference_build": true,
+  "configuration": {
+    "add_special_tokens": false,
+    "batch_size": 128,
+    "conditions_sharing_statistics": [
+      "M",
+      "A",
+      "I"
+    ],
+    "cross_document_windows": false,
+    "h_qwen_tokens": 5,
+    "pooling": "arithmetic mean over all 5 continuation-token positions",
+    "representation": "hidden_states[-1]",
+    "std_ddof": 1,
+    "stride_qwen_tokens": 1
+  },
+  "experimental_m_a_i_data_used": false,
+  "generated_at_utc": "2026-09-08T22:42:24.857036+00:00",
+  "model": {
+    "identifier": "Qwen/Qwen3.5-9B",
+    "model_class": "Qwen3_5ForCausalLM",
+    "resolved_snapshot": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "tokenizer_class": "Qwen2Tokenizer"
+  },
+  "output": {
+    "count": 4731,
+    "file": "data/reference/ias_naturalstories_qwen3_5_9b_h5_final_stats.json",
+    "sha256": "1055ef2e972fc393bcd801170eea6ac87746799b259bcd1c7a5a2677e8e54b8c"
+  },
+  "qc": {
+    "experimental_data_used": false,
+    "mean_finite": true,
+    "shared_for_all_conditions": true,
+    "std_finite": true,
+    "std_max": 6.243847826524189,
+    "std_min": 0.4573981662307917,
+    "std_strictly_positive": true
+  },
+  "runtime": {
+    "determinism": {
+      "algorithms": "torch deterministic algorithms",
+      "cublas_workspace_config": ":4096:8",
+      "cuda_matmul_allow_tf32": false,
+      "cudnn_allow_tf32": false,
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": true,
+      "deterministic_algorithms_enabled": true,
+      "reproducibility_scope": "exact resume within the recorded model, artifacts, GPU, driver, CUDA, PyTorch, and Transformers runtime",
+      "seed_policy": "seed Python, NumPy, CPU PyTorch, and all visible CUDA generators once per seed; stable item then M/A/I group order"
+    },
+    "gpu": {
+      "compute_capability": [
+        12,
+        0
+      ],
+      "cuda_visible_devices": "0",
+      "driver": "570.211.01",
+      "name": "NVIDIA GeForce RTX 5090",
+      "selected_device": "cuda:0",
+      "total_memory_bytes": 33679736832,
+      "uuid": "GPU-b53b308e-5d38-42af-01ca-5e21fb39b700"
+    },
+    "load": {
+      "attention_implementation": "eager",
+      "device_map": {
+        "": "cuda:0"
+      },
+      "dtype": "bfloat16",
+      "local_files_only": true,
+      "low_cpu_mem_usage": true,
+      "quantization": null,
+      "single_gpu": true,
+      "trust_remote_code": false
+    },
+    "model": {
+      "architecture": "Qwen3_5ForCausalLM",
+      "artifact_files": {
+        "chat_template.jinja": {
+          "bytes": 7756
+        },
+        "config.json": {
+          "bytes": 3126
+        },
+        "merges.txt": {
+          "bytes": 3353259
+        },
+        "model.safetensors-00001-of-00004.safetensors": {
+          "bytes": 5276436216
+        },
+        "model.safetensors-00002-of-00004.safetensors": {
+          "bytes": 5335161512
+        },
+        "model.safetensors-00003-of-00004.safetensors": {
+          "bytes": 5368717440
+        },
+        "model.safetensors-00004-of-00004.safetensors": {
+          "bytes": 3325995712
+        },
+        "model.safetensors.index.json": {
+          "bytes": 79657
+        },
+        "tokenizer.json": {
+          "bytes": 12807982
+        },
+        "tokenizer_config.json": {
+          "bytes": 16710
+        },
+        "vocab.json": {
+          "bytes": 6722759
+        }
+      },
+      "attention_implementation": "eager",
+      "hidden_size": 4096,
+      "identifier": "Qwen/Qwen3.5-9B",
+      "max_position_embeddings": 262144,
+      "model_type": "qwen3_5_text",
+      "num_attention_heads": 16,
+      "num_hidden_layers": 32,
+      "num_key_value_heads": 4,
+      "parameter_count": 8953803264,
+      "parameter_devices": [
+        "cuda:0"
+      ],
+      "parameter_dtypes": [
+        "bfloat16"
+      ],
+      "quantized": false,
+      "requested_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "resolved_commit": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "vocab_size": 248320
+    },
+    "software": {
+      "cuda_runtime": "12.8",
+      "cudnn": "91002",
+      "huggingface_hub": "1.30.0",
+      "numpy": "1.26.4",
+      "python": "3.12.3",
+      "torch": "2.8.0+cu128",
+      "transformers": "5.16.1"
+    },
+    "tokenizer": {
+      "chat_template_available": true,
+      "chat_template_preserved": true,
+      "class": "Qwen2Tokenizer",
+      "rq1_interface": {
+        "add_special_tokens": false,
+        "chat_template_used": false,
+        "raw_text_prefixes": true
+      }
+    }
+  },
+  "schema": "ias-naturalstories-qwen3.5-9b-reference-freeze/v1",
+  "source": {
+    "documents": [
+      {
+        "decoded_round_trip": true,
+        "h5_windows": 461,
+        "id": "1",
+        "qwen_tokens": 465
+      },
+      {
+        "decoded_round_trip": true,
+        "h5_windows": 456,
+        "id": "2",
+        "qwen_tokens": 460
+      },
+      {
+        "decoded_round_trip": true,
+        "h5_windows": 463,
+        "id": "3",
+        "qwen_tokens": 467
+      },
+      {
+        "decoded_round_trip": true,
+        "h5_windows": 457,
+        "id": "4",
+        "qwen_tokens": 461
+      },
+      {
+        "decoded_round_trip": true,
+        "h5_windows": 456,
+        "id": "5",
+        "qwen_tokens": 460
+      },
+      {
+        "decoded_round_trip": true,
+        "h5_windows": 477,
+        "id": "6",
+        "qwen_tokens": 481
+      },
+      {
+        "decoded_round_trip": true,
+        "h5_windows": 467,
+        "id": "7",
+        "qwen_tokens": 471
+      },
+      {
+        "decoded_round_trip": true,
+        "h5_windows": 485,
+        "id": "8",
+        "qwen_tokens": 489
+      },
+      {
+        "decoded_round_trip": true,
+        "h5_windows": 509,
+        "id": "9",
+        "qwen_tokens": 513
+      },
+      {
+        "decoded_round_trip": true,
+        "h5_windows": 500,
+        "id": "10",
+        "qwen_tokens": 504
+      }
+    ],
+    "file": "vendor/ias-naturalstories/texts_400words.csv",
+    "qwen_h5_windows": 4731,
+    "repository": "https://github.com/glnmario/ias-lang-comp.git",
+    "sha256": "5747a7de60b3b2d6ae5dbb1934b2e47c4ef17ce8eb86cd7473c75cf449db437b",
+    "total_qwen_tokens": 4771,
+    "upstream_commit": "b2b54eb3bb7decf46b7eff27e61d8b5306f04355",
+    "upstream_path": "data/corpora/naturalstories/texts_400words.csv"
+  },
+  "status": "pass"
+}

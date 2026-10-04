@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/xiaoyuisrain/metaphor-understanding-challenge.git",
+  "upstream_commit": "5b78a540705661f49fda693e504250d4a1fc4516",
+  "files": {
+    "correct_answers/for_judgement.csv": {
+      "sha256": "6d3a69c9efeaf570e25ad981fa3e967563495c42429d6111877c1e2eb577d99a"
+    },
+    "correct_answers/for_generation.csv": {
+      "sha256": "7816b422516608d015eb69926571eb7647899e9eee4bc65dbbf46aeb2f64ca7f"
+    }
+  }
+}
