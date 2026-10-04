@@ -14,19 +14,19 @@ MODE="${1:-}"
 case "$MODE" in
   new)
     RUN_TAG="${RUN_TAG:-$(date -u +%Y%m%dT%H%M%SZ)}"
-    FORMAL_RUN_DIR="$PROJECT_ROOT/runs/formal/$RUN_TAG"
+    FORMAL_RUN_DIR="$PROJECT_ROOT/results/formal/$RUN_TAG"
     GENERATION_RESUME=()
     ;;
   resume)
     if [[ $# -ne 2 ]]; then
-      echo "usage: bash runpod/formal.sh resume $PROJECT_ROOT/runs/formal/<run-tag>" >&2
+      echo "usage: bash runpod/formal.sh resume $PROJECT_ROOT/results/formal/<run-tag>" >&2
       exit 2
     fi
     FORMAL_RUN_DIR="${2%/}"
     case "$FORMAL_RUN_DIR" in
-      "$PROJECT_ROOT"/runs/formal/*) ;;
+      "$PROJECT_ROOT"/results/formal/*) ;;
       *)
-        echo "ERROR: resume directory must be below $PROJECT_ROOT/runs/formal" >&2
+        echo "ERROR: resume directory must be below $PROJECT_ROOT/results/formal" >&2
         exit 2
         ;;
     esac
@@ -34,7 +34,7 @@ case "$MODE" in
     ;;
   *)
     echo "usage: bash runpod/formal.sh new" >&2
-    echo "   or: bash runpod/formal.sh resume $PROJECT_ROOT/runs/formal/<run-tag>" >&2
+    echo "   or: bash runpod/formal.sh resume $PROJECT_ROOT/results/formal/<run-tag>" >&2
     exit 2
     ;;
 esac
@@ -103,11 +103,11 @@ export TRANSFORMERS_OFFLINE=1
 export TOKENIZERS_PARALLELISM=false
 export CUDA_VISIBLE_DEVICES=0
 
-run_timed reference_validation "$PYTHON" scripts/validate_reference_stats.py \
+run_timed reference_validation "$PYTHON" runpod/experiments/validate_reference_stats.py \
   --stats "$REFERENCE_STATS" \
   --manifest "$REFERENCE_MANIFEST"
 
-run_timed continuation_generation "$PYTHON" scripts/generate_continuations.py \
+run_timed continuation_generation "$PYTHON" runpod/experiments/generate_continuations.py \
   --input "$FORMAL_INPUT" \
   --run-dir "$FORMAL_RUN_DIR/continuations" \
   "${GENERATION_RESUME[@]}" \
@@ -115,7 +115,7 @@ run_timed continuation_generation "$PYTHON" scripts/generate_continuations.py \
   --device cuda:0
 
 mkdir -p "$FORMAL_RUN_DIR/distances"
-run_timed distance "$PYTHON" scripts/compute_distances.py \
+run_timed distance "$PYTHON" runpod/experiments/compute_distances.py \
   --input "$FORMAL_RUN_DIR/continuations/continuations.jsonl" \
   --items "$FORMAL_INPUT" \
   --stats "$REFERENCE_STATS" \
@@ -125,13 +125,13 @@ run_timed distance "$PYTHON" scripts/compute_distances.py \
   --device cuda \
   --batch-size "${DISTANCE_BATCH_SIZE:-64}"
 
-run_timed primary_analysis "$PYTHON" scripts/run_primary_analysis.py \
+run_timed primary_analysis "$PYTHON" runpod/experiments/run_primary_analysis.py \
   --sentence-distances "$FORMAL_RUN_DIR/distances/qwen3p5_9b_formal_sentence_distances.csv" \
   --distance-summary "$FORMAL_RUN_DIR/distances/qwen3p5_9b_formal_distance_summary.json" \
   --run-manifest "$FORMAL_RUN_DIR/continuations/run_manifest.json" \
   --output-dir "$FORMAL_RUN_DIR/primary"
 
-run_timed surprisal "$PYTHON" scripts/run_surprisal.py \
+run_timed surprisal "$PYTHON" runpod/experiments/run_surprisal.py \
   --input "$FORMAL_INPUT" \
   --output-dir "$FORMAL_RUN_DIR/surprisal" \
   --scope formal \
@@ -139,7 +139,7 @@ run_timed surprisal "$PYTHON" scripts/run_surprisal.py \
   --device cuda \
   --batch-size "${SURPRISAL_BATCH_SIZE:-8}"
 
-run_timed rq2_direct "$PYTHON" scripts/run_direct_judgement.py \
+run_timed rq2_direct "$PYTHON" runpod/experiments/run_direct_judgement.py \
   --scope formal \
   --analysis-items "$FORMAL_INPUT" \
   --controls "$PROJECT_ROOT/data/controls/qwen_instruct_direct_controls.json" \
@@ -147,7 +147,7 @@ run_timed rq2_direct "$PYTHON" scripts/run_direct_judgement.py \
   --device cuda:0 \
   --output-dir "$FORMAL_RUN_DIR/direct"
 
-run_timed rq2_analysis "$PYTHON" scripts/run_rq2_analysis.py \
+run_timed rq2_analysis "$PYTHON" runpod/experiments/run_rq2_analysis.py \
   --direct-target "$FORMAL_RUN_DIR/direct/direct_judgement_target.csv" \
   --direct-manifest "$FORMAL_RUN_DIR/direct/direct_judgement_manifest.json" \
   --sentence-distances "$FORMAL_RUN_DIR/distances/qwen3p5_9b_formal_sentence_distances.csv" \

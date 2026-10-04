@@ -16,7 +16,7 @@ mkdir -p \
   "$PROJECT_ROOT/.cache/pycache" \
   "$PROJECT_ROOT/.tmp" \
   "$PROJECT_ROOT/environment" \
-  "$PROJECT_ROOT/runs" \
+  "$PROJECT_ROOT/results" \
   "$PROJECT_ROOT/transfer"
 
 export HF_HOME="$PROJECT_ROOT/.cache/huggingface"
@@ -41,13 +41,13 @@ PYTHON="$PROJECT_ROOT/.venv/bin/python"
 "$PYTHON" -m pip install --disable-pip-version-check --no-deps -e .
 "$PYTHON" -m unittest discover -s tests -v
 
-"$PYTHON" scripts/check_environment.py \
+"$PYTHON" runpod/experiments/check_environment.py \
   --allow-download \
   --device cuda:0 \
   --cache-dir "$PROJECT_ROOT/.cache/huggingface" \
   --output "$PROJECT_ROOT/environment/qwen3_5_9b_environment.json"
 
-"$PYTHON" scripts/tokenization_audit.py \
+"$PYTHON" runpod/experiments/tokenization_audit.py \
   --input "$PROJECT_ROOT/data/processed/analysis_items.csv" \
   --cache-dir "$PROJECT_ROOT/.cache/huggingface" \
   --output "$PROJECT_ROOT/environment/tokenization_audit_summary.json"

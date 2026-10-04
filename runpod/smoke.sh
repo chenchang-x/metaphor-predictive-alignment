@@ -11,7 +11,7 @@ REFERENCE_SOURCE_MANIFEST="$PROJECT_ROOT/vendor/ias-naturalstories/source_manife
 REFERENCE_STATS="$PROJECT_ROOT/data/reference/ias_naturalstories_qwen3_5_9b_h5_final_stats.json"
 REFERENCE_MANIFEST="$PROJECT_ROOT/data/reference/ias_naturalstories_qwen3_5_9b_h5_final_manifest.json"
 RUN_TAG="${RUN_TAG:-$(date -u +%Y%m%dT%H%M%SZ)}"
-SMOKE_RUN_DIR="$PROJECT_ROOT/runs/smoke/$RUN_TAG"
+SMOKE_RUN_DIR="$PROJECT_ROOT/results/smoke/$RUN_TAG"
 BENCHMARK_SUMMARY="$SMOKE_RUN_DIR/generation_speed_benchmark.json"
 AUXILIARY_BENCHMARK="$SMOKE_RUN_DIR/auxiliary_stage_benchmark.json"
 STAGE_TIMINGS="$SMOKE_RUN_DIR/stage_timings.tsv"
@@ -65,7 +65,7 @@ export TOKENIZERS_PARALLELISM=false
 export CUDA_VISIBLE_DEVICES=0
 
 if [[ ! -s "$REFERENCE_STATS" || ! -s "$REFERENCE_MANIFEST" ]]; then
-  run_timed reference_build "$PYTHON" scripts/build_reference_stats.py \
+  run_timed reference_build "$PYTHON" runpod/experiments/build_reference_stats.py \
     --input "$REFERENCE_INPUT" \
     --source-manifest "$REFERENCE_SOURCE_MANIFEST" \
     --output "$REFERENCE_STATS" \
@@ -77,11 +77,11 @@ else
   printf 'reference_build\t0\treused\n' >> "$STAGE_TIMINGS"
 fi
 
-run_timed reference_validation "$PYTHON" scripts/validate_reference_stats.py \
+run_timed reference_validation "$PYTHON" runpod/experiments/validate_reference_stats.py \
   --stats "$REFERENCE_STATS" \
   --manifest "$REFERENCE_MANIFEST"
 
-run_timed rq1_generation_smoke "$PYTHON" scripts/generate_continuations.py \
+run_timed rq1_generation_smoke "$PYTHON" runpod/experiments/generate_continuations.py \
   --input "$SMOKE_INPUT" \
   --output "$SMOKE_RUN_DIR/continuations.jsonl" \
   --summary "$SMOKE_RUN_DIR/continuations_summary.json" \
@@ -89,7 +89,7 @@ run_timed rq1_generation_smoke "$PYTHON" scripts/generate_continuations.py \
   --device cuda:0
 
 mkdir -p "$SMOKE_RUN_DIR/distances"
-run_timed distance_smoke "$PYTHON" scripts/compute_distances.py \
+run_timed distance_smoke "$PYTHON" runpod/experiments/compute_distances.py \
   --input "$SMOKE_RUN_DIR/continuations.jsonl" \
   --items "$SMOKE_INPUT" \
   --stats "$REFERENCE_STATS" \
@@ -99,7 +99,7 @@ run_timed distance_smoke "$PYTHON" scripts/compute_distances.py \
   --device cuda \
   --batch-size "${DISTANCE_BATCH_SIZE:-64}"
 
-run_timed surprisal_smoke "$PYTHON" scripts/run_surprisal.py \
+run_timed surprisal_smoke "$PYTHON" runpod/experiments/run_surprisal.py \
   --input "$SMOKE_INPUT" \
   --output-dir "$SMOKE_RUN_DIR/surprisal" \
   --scope smoke \
@@ -107,14 +107,14 @@ run_timed surprisal_smoke "$PYTHON" scripts/run_surprisal.py \
   --device cuda \
   --batch-size "${SURPRISAL_BATCH_SIZE:-8}"
 
-run_timed rq2_controls "$PYTHON" scripts/run_direct_judgement.py \
+run_timed rq2_controls "$PYTHON" runpod/experiments/run_direct_judgement.py \
   --scope controls \
   --controls "$PROJECT_ROOT/data/controls/qwen_instruct_direct_controls.json" \
   --cache-dir "$CACHE_DIR" \
   --device cuda:0 \
   --output-dir "$SMOKE_RUN_DIR/direct-controls"
 
-run_timed continuation_benchmark "$PYTHON" scripts/generate_continuations.py \
+run_timed continuation_benchmark "$PYTHON" runpod/experiments/generate_continuations.py \
   --input "$FORMAL_INPUT" \
   --benchmark \
   --benchmark-items "${BENCHMARK_ITEMS:-12}" \
@@ -124,7 +124,7 @@ run_timed continuation_benchmark "$PYTHON" scripts/generate_continuations.py \
   --cache-dir "$CACHE_DIR" \
   --device cuda:0
 
-run_timed auxiliary_benchmarks "$PYTHON" scripts/benchmark_auxiliary_stages.py \
+run_timed auxiliary_benchmarks "$PYTHON" runpod/experiments/benchmark_auxiliary_stages.py \
   --input "$FORMAL_INPUT" \
   --cache-dir "$CACHE_DIR" \
   --device cuda:0 \
@@ -132,7 +132,7 @@ run_timed auxiliary_benchmarks "$PYTHON" scripts/benchmark_auxiliary_stages.py \
   --surprisal-batch-size "${SURPRISAL_BATCH_SIZE:-8}" \
   --output "$AUXILIARY_BENCHMARK"
 
-"$PYTHON" scripts/summarize_smoke_timing.py \
+"$PYTHON" runpod/experiments/summarize_smoke_timing.py \
   --timings "$STAGE_TIMINGS" \
   --generation-benchmark "$BENCHMARK_SUMMARY" \
   --auxiliary-benchmark "$AUXILIARY_BENCHMARK" \

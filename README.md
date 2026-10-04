@@ -6,28 +6,29 @@ The experiment uses the official post-trained checkpoint at revision `c202236235
 
 - [Experimental protocol](docs/protocol_en.md)
 - [Formal results](docs/formal_20260908T224807Z_summary.md)
-- [Figures, tables and source data](figures/manuscript_20260911/README.md)
-- [Figure gallery](figures/manuscript_20260911/index.html)
+- [Figures, tables and source data](figures/README.md)
+- [Figure gallery](figures/index.html)
 
 ## Repository structure
 
 ```text
 src/qwen_alignment/                  Core implementation
-experiments/                         Experimental, analysis and plotting entry points
+runpod/experiments/                  Experimental, analysis and plotting entry points
 data/processed/                      Retained formal materials
 data/controls/                       Functional controls
 data/reference/                      Shared standardisation statistics
 data/smoke/                          Small-scale test inputs
 vendor/                              Original third-party materials and source manifests
 results/formal/20260908T224807Z/       Complete formal machine outputs
-figures/manuscript_20260911/           Figures, tables, source data and validation records
+figures/                             Main figures, supplementary figures, tables and source data
+docs/figure_validation/               Archived figure validation reports
 docs/                                Protocol and results documentation
 environment/                         Recorded execution environment
 runpod/                              GPU deployment and execution scripts
 tests/                               Automated tests
 ```
 
-`experiments/` contains executable analysis code; `results/` contains its outputs. All 17 core modules remain in `src/qwen_alignment/`. `docs/protocol.md` is an identical English copy of `docs/protocol_en.md`, retained for compatibility with the packaging scripts.
+`runpod/experiments/` contains executable analysis code; `results/` contains its outputs. All 17 core modules remain in `src/qwen_alignment/`. `docs/protocol.md` is an identical English copy of `docs/protocol_en.md`, retained for compatibility with the packaging scripts.
 
 Run local commands from this repository's root. Python entry points resolve the root from their own location. RunPod scripts use the fixed deployment root `/workspace/qwen3p5-9b-metaphor-predictive-alignment`. Each deployment keeps its model snapshot, tokenizer artifacts, reference statistics, checkpoints and results inside that root.
 
@@ -55,7 +56,7 @@ The following inputs are included:
 - `vendor/ias-naturalstories/source_manifest.json`
 
 ```bash
-python experiments/build_transfer_bundle.py
+python runpod/experiments/build_transfer_bundle.py
 ```
 
 The command creates `transfer/qwen3p5-9b-metaphor-predictive-alignment.tar.gz` and prints its SHA-256. The bundle contains only allowlisted code, inputs and protocols. It excludes saved results, model caches, generated reference statistics and environment reports.
@@ -127,6 +128,6 @@ The transfer directory is excluded from subsequent source bundles.
 
 ## Included formal run
 
-`results/formal/20260908T224807Z/` contains the complete saved run, including continuation records, its SQLite checkpoint, distances, direct scores, RQ1 and RQ2 results, surprisal outputs, stage timings and the run log. See the [results summary](docs/formal_20260908T224807Z_summary.md) for interpretation and the [figure documentation](figures/manuscript_20260911/README.md) for CPU-only reproduction.
+`results/formal/20260908T224807Z/` contains the complete saved run, including continuation records, its SQLite checkpoint, distances, direct scores, RQ1 and RQ2 results, surprisal outputs, stage timings and the run log. See the [results summary](docs/formal_20260908T224807Z_summary.md) for interpretation and the [figure documentation](figures/README.md) for CPU-only reproduction.
 
 Saved machine manifests and historical validation reports retain their original execution paths. The executable entry points and documentation use the reorganised paths.
